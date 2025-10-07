@@ -1,0 +1,151 @@
+# RideBuddy Pro .gitignore
+
+# Large deployment packages (>100MB)
+*.zip
+RideBuddy_Pro_v*.zip
+
+# Large datasets and generated files
+comprehensive_datasets/
+synthetic_datasets/
+**/synthetic_enhanced/
+**/dataset_samples/
+**/augmented_samples/
+
+# Large model files (use GitHub Releases instead)
+*.pth
+*.pkl
+*.onnx
+*.tflite
+trained_models/enhanced_driver_model.pth
+trained_models/lightweight_model.pth
+
+# Large media files
+*.mp4
+*.avi
+*.mov
+*.mkv
+large_videos/
+
+# Database files
+*.db
+*.sqlite
+*.sqlite3
+
+# Log files
+*.log
+logs/
+debug.log
+
+# Python cache
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.Python
+env/
+pip-log.txt
+pip-delete-this-directory.txt
+.tox/
+.coverage
+.coverage.*
+.cache
+nosetests.xml
+coverage.xml
+*.cover
+*.py,cover
+.hypothesis/
+.pytest_cache/
+
+# Virtual environment
+venv/
+env/
+ENV/
+env.bak/
+venv.bak/
+
+# IDE files
+.vscode/settings.json
+.vscode/launch.json
+.idea/
+*.swp
+*.swo
+*~
+
+# OS files
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+
+# Large datasets (keep structure but not content)
+data/large_datasets/
+data/**/*.mp4
+data/**/*.avi
+data/**/*.mov
+data/**/*.mkv
+comprehensive_datasets/*.mp4
+comprehensive_datasets/*.avi
+comprehensive_datasets/*.mov
+comprehensive_datasets/*.zip
+comprehensive_datasets/large_files/
+
+# Model files (>25MB)
+trained_models/*.pth
+trained_models/*.pt
+trained_models/*.onnx
+trained_models/large_models/
+*.h5
+*.hdf5
+*.pb
+
+# Temporary files
+temp/
+tmp/
+*.tmp
+*.temp
+
+# Jupyter Notebook
+.ipynb_checkpoints
+
+# PyCharm
+.idea/
+
+# Spyder
+.spyderproject
+.spyproject
+
+# Rope
+.ropeproject
+
+# mkdocs documentation
+/site
+
+# mypy
+.mypy_cache/
+.dmypy.json
+dmypy.json
+
+# Pyre type checker
+.pyre/
+
+# Sensitive configuration files (keep templates)
+*_private.ini
+*_secret.json
+api_keys.txt
+credentials.json
+
+# Build artifacts
+build/
+dist/
+*.egg-info/
+
+# Documentation build files
+docs/_build/
+
+# Local configuration
+local_config.ini
+.env
+.env.local

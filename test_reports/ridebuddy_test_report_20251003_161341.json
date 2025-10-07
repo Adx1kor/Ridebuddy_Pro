@@ -1,0 +1,113 @@
+{
+  "timestamp": "20251003_161341",
+  "test_results": [
+    {
+      "category": "Dependencies",
+      "dependencies": {
+        "OpenCV": true,
+        "PIL/Pillow": true,
+        "tkinter": true
+      },
+      "versions": {
+        "OpenCV": "4.12.0",
+        "PIL": "11.3.0",
+        "tkinter": 8.6
+      },
+      "all_available": true
+    },
+    {
+      "category": "GUI Stress",
+      "tests": [
+        "Rapid UI updates",
+        "Large alert lists",
+        "Extended monitoring sessions",
+        "Multiple dialog boxes",
+        "File operations while monitoring"
+      ],
+      "status": "Simulated - requires live GUI"
+    },
+    {
+      "category": "Camera Edge Cases",
+      "edge_cases": [
+        "Camera disconnect handling needed"
+      ],
+      "working_cameras": [
+        0
+      ]
+    },
+    {
+      "category": "File I/O Edge Cases",
+      "edge_cases": [
+        "Correctly handled invalid path: nonexistent_file.jpg...",
+        "Correctly handled invalid path: /invalid/path/file.mp4...",
+        "Correctly handled invalid path: file_with_spaces in name.png...",
+        "Correctly handled invalid path: very_long_filename_xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx...",
+        "Correctly handled invalid path: file.invalid_extension...",
+        "Correctly handled invalid path: ...",
+        "Special character test: file@#$.jpg",
+        "Special character test: \u0444\u0430\u0439\u043b.jpg",
+        "Special character test: \u6587\u4ef6.mp4"
+      ]
+    },
+    {
+      "category": "Threading Stability",
+      "issues": [
+        "Queue overflow handled correctly"
+      ],
+      "active_threads": 1
+    },
+    {
+      "category": "Error Handling",
+      "scenarios": [
+        "\u2705 Division by zero: Properly caught - ZeroDivisionError",
+        "\u2705 Invalid memory access: Properly caught - IndexError",
+        "\u2705 Type errors: Properly caught - TypeError",
+        "\u2705 Attribute errors: Properly caught - AttributeError"
+      ]
+    },
+    {
+      "category": "UI Edge Cases",
+      "issues": [
+        "Text test: 'Very long text that should wra...'",
+        "Text test: ''",
+        "Text test: 'Special chars: \u00e0\u00e1\u00e2\u00e3\u00e4\u00e5\u00e6\u00e7\u00e8\u00e9\u00ea\u00eb\u00ec\u00ed\u00ee...'",
+        "Text test: 'Numbers: 1234567890.123456789'",
+        "Text test: 'Mixed: Test123!@#$%^&*()'",
+        "Text test: '\n\nNew\nlines\n\n'",
+        "Text test: '\t\tTabs\t\t'",
+        "Window resize handling needed",
+        "Accessibility features check needed"
+      ]
+    },
+    {
+      "category": "Cross-Platform",
+      "system_info": {
+        "platform": "Windows",
+        "release": "10",
+        "architecture": [
+          "64bit",
+          "WindowsPE"
+        ],
+        "python_version": "3.11.9"
+      },
+      "issues": [
+        "Path handling: test\\subdir\\file.txt",
+        "Line ending compatibility needed",
+        "File operations: OK"
+      ]
+    }
+  ],
+  "edge_cases": [],
+  "improvement_suggestions": [],
+  "performance_metrics": {
+    "memory": {
+      "note": "psutil not available - basic test only"
+    }
+  },
+  "system_info": {
+    "python_version": "3.11.9 (tags/v3.11.9:de54cf5, Apr  2 2024, 10:12:12) [MSC v.1938 64 bit (AMD64)]",
+    "platform": "win32",
+    "opencv_available": true,
+    "pil_available": true
+  }
+}

@@ -1,0 +1,34 @@
+# Core dependencies
+torch>=2.0.0
+torchvision>=0.15.0
+opencv-python>=4.8.0
+numpy>=1.24.0
+pillow>=9.5.0
+matplotlib>=3.7.0
+seaborn>=0.12.0
+pandas>=2.0.0
+scikit-learn>=1.3.0
+tqdm>=4.65.0
+
+# YOLO and detection
+ultralytics>=8.0.0
+
+# Model optimization (optional)
+onnx>=1.14.0
+onnxruntime>=1.15.0
+
+# Data processing
+albumentations>=1.3.0
+
+# Utilities
+pyyaml>=6.0
+click>=8.1.0
+psutil>=5.9.0
+
+# GUI (included with Python)
+# tkinter (built-in)
+
+# Optional development tools
+# wandb>=0.15.0
+# tensorboard>=2.13.0
+# rich>=13.0.0

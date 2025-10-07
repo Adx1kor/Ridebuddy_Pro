@@ -1,0 +1,29 @@
+{
+  "model_version": "2.1.0",
+  "creation_date": "2025-10-03T21:44:23.611363",
+  "num_classes": 5,
+  "class_to_idx": {
+    "alert": 0,
+    "drowsy": 1,
+    "normal_driving": 2,
+    "phone_usage": 3,
+    "seatbelt_off": 4
+  },
+  "input_size": [
+    224,
+    224
+  ],
+  "model_architecture": "EnhancedDriverNet",
+  "training_config": {
+    "batch_size": 32,
+    "learning_rate": 0.001,
+    "num_epochs": 100,
+    "patience": 15,
+    "min_delta": 0.001,
+    "weight_decay": 0.0001,
+    "step_size": 30,
+    "gamma": 0.1
+  },
+  "best_val_accuracy": 100.0,
+  "deployment_notes": "Enhanced model trained on comprehensive datasets for production deployment"
+}

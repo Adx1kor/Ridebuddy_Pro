@@ -1,0 +1,61 @@
+# RideBuddy Lightweight Model Configuration
+# Optimized for edge deployment with minimal compute requirements
+
+# Model Configuration
+model:
+  backbone: 'mobilenet_v3_small'  # Options: mobilenet_v3_small, efficientnet_b0
+  num_classes: 3  # normal, drowsy, phone_distraction
+  dropout: 0.2
+  use_attention: true
+  pretrained: true
+
+# Training Configuration
+epochs: 50
+batch_size: 32
+num_workers: 4
+use_amp: true  # Mixed precision training
+
+# Optimizer Configuration
+optimizer:
+  type: 'AdamW'  # Options: AdamW, SGD
+  lr: 0.001
+  weight_decay: 0.0001
+
+# Scheduler Configuration
+scheduler:
+  type: 'CosineAnnealingLR'  # Options: CosineAnnealingLR, ReduceLROnPlateau, StepLR
+  eta_min: 0.000001
+
+# Loss Configuration
+loss:
+  classification_weight: 1.0
+  phone_detection_weight: 0.5
+  seatbelt_detection_weight: 0.3
+  focal_loss_alpha: 0.25
+  focal_loss_gamma: 2.0
+
+# Data Loader Configuration
+dataloader:
+  batch_size: 32
+  num_workers: 4
+  sequence_length: null  # Set to integer for temporal modeling
+  image_size: 224
+
+# Early Stopping Configuration
+early_stopping:
+  patience: 10
+  min_delta: 0.001
+  restore_best_weights: true
+  verbose: true
+
+# Monitoring Configuration
+use_wandb: false
+experiment_name: 'ridebuddy_lightweight'
+
+# Data Augmentation
+augmentation:
+  horizontal_flip: 0.5
+  brightness_contrast: 0.2
+  hue_saturation: 0.3
+  gaussian_noise: 0.2
+  motion_blur: 0.2

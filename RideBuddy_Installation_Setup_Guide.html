@@ -1,0 +1,2092 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Installation And Setup Guide</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            color: #333;
+            background: white;
+        }
+        h1 {
+            color: #2F5496;
+            text-align: center;
+            font-size: 28px;
+            margin-bottom: 30px;
+            border-bottom: 3px solid #2F5496;
+            padding-bottom: 10px;
+        }
+        h2 {
+            color: #1F3656;
+            font-size: 22px;
+            margin-top: 30px;
+            margin-bottom: 15px;
+            border-left: 4px solid #2F5496;
+            padding-left: 15px;
+        }
+        h3 {
+            color: #1F3656;
+            font-size: 18px;
+            margin-top: 25px;
+            margin-bottom: 12px;
+        }
+        h4 {
+            color: #1F3656;
+            font-size: 16px;
+            margin-top: 20px;
+            margin-bottom: 10px;
+        }
+        p {
+            margin-bottom: 12px;
+            text-align: justify;
+        }
+        code {
+            font-family: 'Consolas', 'Monaco', 'Courier New', monospace;
+            background-color: #f5f5f5;
+            padding: 2px 4px;
+            border-radius: 3px;
+            font-size: 90%;
+        }
+        pre {
+            background-color: #f8f8f8;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            padding: 15px;
+            overflow-x: auto;
+            margin: 15px 0;
+        }
+        pre code {
+            background: none;
+            padding: 0;
+        }
+        ul, ol {
+            margin-bottom: 15px;
+            padding-left: 30px;
+        }
+        li {
+            margin-bottom: 5px;
+        }
+        table {
+            border-collapse: collapse;
+            width: 100%;
+            margin: 20px 0;
+        }
+        th, td {
+            border: 1px solid #ddd;
+            padding: 12px;
+            text-align: left;
+        }
+        th {
+            background-color: #f2f2f2;
+            font-weight: bold;
+            color: #1F3656;
+        }
+        blockquote {
+            border-left: 4px solid #2F5496;
+            margin: 20px 0;
+            padding: 10px 20px;
+            background-color: #f9f9f9;
+            font-style: italic;
+        }
+        hr {
+            border: none;
+            height: 2px;
+            background-color: #ddd;
+            margin: 30px 0;
+        }
+        .footer {
+            margin-top: 50px;
+            padding-top: 20px;
+            border-top: 1px solid #ddd;
+            text-align: center;
+            font-size: 12px;
+            color: #666;
+        }
+        .toc {
+            background-color: #f8f9fa;
+            border: 1px solid #dee2e6;
+            border-radius: 5px;
+            padding: 20px;
+            margin: 20px 0;
+        }
+        .toc h2 {
+            margin-top: 0;
+            color: #2F5496;
+            border: none;
+            padding: 0;
+        }
+        .toc ul {
+            list-style-type: none;
+            padding-left: 0;
+        }
+        .toc li {
+            margin-bottom: 8px;
+        }
+        .toc a {
+            text-decoration: none;
+            color: #1F3656;
+        }
+        .toc a:hover {
+            color: #2F5496;
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+
+<h1>Installation And Setup Guide</h1>
+<h1 id="ridebuddy-pro-v2-1-0---installation--setup-guide">RideBuddy Pro v2.1.0 - Installation  Setup Guide</h1>
+<br>
+<h2 id="quick-start">Quick Start</h2>
+<br>
+<h3 id="prerequisites-check">Prerequisites Check</h3>
+<p>Before installation, ensure your system meets the minimum requirements:</p>
+<ul>
+<li><strong>Operating System</strong>: Windows 10/11 or Linux Ubuntu 18.04+</li>
+<li><strong>Python</strong>: Version 3.8 or higher</li>
+<li><strong>RAM</strong>: 4GB minimum (8GB recommended)</li>
+<li><strong>Storage</strong>: 2GB available space</li>
+<li><strong>Camera</strong>: USB webcam or integrated camera</li>
+</ul>
+<br>
+<hr>
+<br>
+<h2 id="table-of-contents">Table of Contents</h2>
+<ol>
+<li>[System Requirements](#system-requirements)</li>
+<li>[Installation Methods](#installation-methods)</li>
+<li>[Dependency Installation](#dependency-installation)</li>
+<li>[Configuration Setup](#configuration-setup)</li>
+<li>[First Run](#first-run)</li>
+<li>[Vehicle Deployment](#vehicle-deployment)</li>
+<li>[Troubleshooting](#troubleshooting)</li>
+<li>[Verification](#verification)</li>
+</ol>
+<br>
+<hr>
+<br>
+<h2 id="system-requirements">System Requirements</h2>
+<br>
+<h3 id="minimum-requirements">Minimum Requirements</h3>
+<pre><code>
+Hardware:
+
+
+├── CPU: Intel i3 / AMD Ryzen 3 (2.0GHz+)
+
+
+├── RAM: 4GB
+
+
+├── GPU: Not required (CPU inference)
+
+
+├── Storage: 2GB available space
+
+
+├── Camera: USB 2.0+ webcam
+
+
+└── Network: Internet for initial setup
+
+
+
+
+
+Software:
+
+
+├── OS: Windows 10/11 (64-bit) or Linux Ubuntu 18.04+
+
+
+├── Python: 3.8+ (3.9-3.11 recommended)
+
+
+├── Drivers: Camera drivers installed
+
+
+└── Permissions: Admin rights for installation
+
+
+</code></pre>
+<br>
+<h3 id="recommended-requirements">Recommended Requirements</h3>
+<pre><code>
+Hardware:
+
+
+├── CPU: Intel i5 / AMD Ryzen 5 (3.0GHz+)
+
+
+├── RAM: 8GB
+
+
+├── GPU: Integrated graphics sufficient
+
+
+├── Storage: 5GB available space
+
+
+├── Camera: HD webcam (720p+)
+
+
+└── Network: Stable internet connection
+
+
+
+
+
+Software:
+
+
+├── OS: Windows 11 or Linux Ubuntu 20.04+
+
+
+├── Python: 3.9-3.11
+
+
+├── Updates: Latest system updates
+
+
+└── Antivirus: Configured to allow RideBuddy
+
+
+</code></pre>
+<br>
+<h3 id="vehicle-specific-requirements">Vehicle-Specific Requirements</h3>
+<pre><code>
+Automotive Environment:
+
+
+├── Power: 12V DC adapter or battery pack
+
+
+├── Mounting: Dashboard or windshield mount
+
+
+├── Vibration: Shock-resistant hardware
+
+
+├── Temperature: -10°C to 60°C operating range
+
+
+└── Connectivity: Optional 4G/5G for fleet mode
+
+
+</code></pre>
+<br>
+<hr>
+<br>
+<h2 id="installation-methods">Installation Methods</h2>
+<br>
+<h3 id="method-1--automated-installation--recommended">Method 1: Automated Installation (Recommended)</h3>
+<br>
+<h4 id="windows-installation">Windows Installation</h4>
+<p><strong>Code (powershell):</strong></p>
+<pre><code>
+# 1. Download the installation package
+
+
+git clone https://github.com/your-repo/ridebuddy-pro.git
+
+
+cd ridebuddy-pro
+
+
+
+
+
+# 2. Run the automated installer
+
+
+.\install_dependencies.py
+
+
+
+
+
+# 3. Execute the setup script
+
+
+.\setup_and_train.bat
+
+
+</code></pre>
+<br>
+<h4 id="linux-installation">Linux Installation</h4>
+<p><strong>Code (bash):</strong></p>
+<pre><code>
+# 1. Clone the repository
+
+
+git clone https://github.com/your-repo/ridebuddy-pro.git
+
+
+cd ridebuddy-pro
+
+
+
+
+
+# 2. Make scripts executable
+
+
+chmod +x install_dependencies.py
+
+
+chmod +x setup_and_train.sh
+
+
+
+
+
+# 3. Run installation
+
+
+python3 install_dependencies.py
+
+
+./setup_and_train.sh
+
+
+</code></pre>
+<br>
+<h3 id="method-2--manual-installation">Method 2: Manual Installation</h3>
+<br>
+<h4 id="step-1--python-environment-setup">Step 1: Python Environment Setup</h4>
+<p><strong>Code (bash):</strong></p>
+<pre><code>
+# Check Python version
+
+
+python --version  # Should be 3.8+
+
+
+
+
+
+# Create virtual environment (recommended)
+
+
+python -m venv ridebuddy_env
+
+
+
+
+
+# Activate virtual environment
+
+
+# Windows:
+
+
+ridebuddy_env\Scripts\activate
+
+
+# Linux/Mac:
+
+
+source ridebuddy_env/bin/activate
+
+
+</code></pre>
+<br>
+<h4 id="step-2--install-core-dependencies">Step 2: Install Core Dependencies</h4>
+<p><strong>Code (bash):</strong></p>
+<pre><code>
+# Upgrade pip
+
+
+pip install --upgrade pip
+
+
+
+
+
+# Install PyTorch (CPU version for edge deployment)
+
+
+pip install torch torchvision --index-url https://download.pytorch.org/whl/cpu
+
+
+
+
+
+# Install OpenCV
+
+
+pip install opencv-python
+
+
+
+
+
+# Install additional requirements
+
+
+pip install -r requirements.txt
+
+
+</code></pre>
+<br>
+<h4 id="step-3--install-optional-components">Step 3: Install Optional Components</h4>
+<p><strong>Code (bash):</strong></p>
+<pre><code>
+# For enhanced performance monitoring
+
+
+pip install psutil
+
+
+
+
+
+# For model optimization (optional)
+
+
+pip install onnx onnxruntime
+
+
+
+
+
+# For advanced data processing
+
+
+pip install albumentations
+
+
+</code></pre>
+<br>
+<hr>
+<br>
+<h2 id="dependency-installation">Dependency Installation</h2>
+<br>
+<h3 id="core-dependencies--required">Core Dependencies (Required)</h3>
+<br>
+<h4 id="requirements-txt">requirements.txt</h4>
+<p><strong>Code (txt):</strong></p>
+<pre><code>
+# Core ML Framework
+
+
+torch&gt;=2.0.0
+
+
+torchvision&gt;=0.15.0
+
+
+
+
+
+# Computer Vision
+
+
+opencv-python&gt;=4.8.0
+
+
+numpy&gt;=1.24.0
+
+
+pillow&gt;=9.5.0
+
+
+
+
+
+# Data Processing
+
+
+pandas&gt;=2.0.0
+
+
+scikit-learn&gt;=1.3.0
+
+
+matplotlib&gt;=3.7.0
+
+
+seaborn&gt;=0.12.0
+
+
+
+
+
+# YOLO Detection
+
+
+ultralytics&gt;=8.0.0
+
+
+
+
+
+# Progress Tracking
+
+
+tqdm&gt;=4.65.0
+
+
+
+
+
+# Configuration
+
+
+pyyaml&gt;=6.0
+
+
+psutil&gt;=5.9.0
+
+
+
+
+
+# GUI (Built-in with Python)
+
+
+# tkinter - included with Python installation
+
+
+</code></pre>
+<br>
+<h4 id="minimal-requirements--requirements-minimal-txt">Minimal Requirements (requirements-minimal.txt)</h4>
+<p><strong>Code (txt):</strong></p>
+<pre><code>
+# Lightweight installation for resource-constrained environments
+
+
+torch&gt;=2.0.0
+
+
+opencv-python&gt;=4.8.0
+
+
+numpy&gt;=1.24.0
+
+
+pillow&gt;=9.5.0
+
+
+</code></pre>
+<br>
+<h3 id="platform-specific-installation">Platform-Specific Installation</h3>
+<br>
+<h4 id="windows-specific-setup">Windows-Specific Setup</h4>
+<p><strong>Code (powershell):</strong></p>
+<pre><code>
+# Install Microsoft Visual C++ Redistributable (if needed)
+
+
+# Download from: https://aka.ms/vs/17/release/vc_redist.x64.exe
+
+
+
+
+
+# Install Windows-specific packages
+
+
+pip install pywin32  # For Windows services integration
+
+
+
+
+
+# Set up Windows camera permissions
+
+
+# Go to Settings &gt; Privacy &gt; Camera &gt; Allow desktop apps to access camera
+
+
+</code></pre>
+<br>
+<h4 id="linux-specific-setup">Linux-Specific Setup</h4>
+<p><strong>Code (bash):</strong></p>
+<pre><code>
+# Install system dependencies (Ubuntu/Debian)
+
+
+sudo apt update
+
+
+sudo apt install python3-pip python3-venv python3-tk
+
+
+sudo apt install libgl1-mesa-glx libglib2.0-0 libsm6 libxext6 libxrender-dev libgomp1
+
+
+
+
+
+# Install camera support
+
+
+sudo apt install v4l-utils  # Video4Linux utilities
+
+
+sudo apt install cheese     # Test camera functionality
+
+
+
+
+
+# Add user to video group (for camera access)
+
+
+sudo usermod -a -G video $USER
+
+
+# Log out and log back in for changes to take effect
+
+
+</code></pre>
+<br>
+<h4 id="macos-specific-setup">MacOS-Specific Setup</h4>
+<p><strong>Code (bash):</strong></p>
+<pre><code>
+# Install Homebrew (if not already installed)
+
+
+/bin/bash -c &quot;$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)&quot;
+
+
+
+
+
+# Install Python via Homebrew
+
+
+brew install python@3.9
+
+
+
+
+
+# Install system dependencies
+
+
+brew install pkg-config
+
+
+brew install cmake
+
+
+</code></pre>
+<br>
+<hr>
+<br>
+<h2 id="configuration-setup">Configuration Setup</h2>
+<br>
+<h3 id="initial-configuration-files">Initial Configuration Files</h3>
+<br>
+<h4 id="1--main-configuration--ridebuddy_config-ini">1. Main Configuration (ridebuddy_config.ini)</h4>
+<p><strong>Code (ini):</strong></p>
+<pre><code>
+[camera]
+
+
+# Camera settings
+
+
+camera_index = 0
+
+
+frame_width = 640
+
+
+frame_height = 480
+
+
+max_fps = 30
+
+
+auto_exposure = true
+
+
+
+
+
+[ai]
+
+
+# AI model settings
+
+
+model_path = ./trained_models/enhanced_driver_net.pth
+
+
+alert_sensitivity = 0.7
+
+
+confidence_threshold = 0.75
+
+
+batch_processing = false
+
+
+
+
+
+[alerts]
+
+
+# Alert configuration
+
+
+audio_alerts = true
+
+
+visual_alerts = true
+
+
+alert_cooldown = 5.0
+
+
+severity_levels = [&quot;Low&quot;, &quot;Medium&quot;, &quot;High&quot;]
+
+
+
+
+
+[gui]
+
+
+# GUI settings
+
+
+theme = dark
+
+
+fullscreen = false
+
+
+auto_save_settings = true
+
+
+alert_history_limit = 100
+
+
+
+
+
+[performance]
+
+
+# Performance tuning
+
+
+max_memory_mb = 512
+
+
+frame_drop_threshold = 0.8
+
+
+cpu_limit_percent = 80
+
+
+reconnect_attempts = 5
+
+
+
+
+
+[logging]
+
+
+# Logging configuration
+
+
+log_level = INFO
+
+
+log_rotation = true
+
+
+max_log_size_mb = 10
+
+
+backup_count = 5
+
+
+
+
+
+[data]
+
+
+# Data management
+
+
+auto_save_results = true
+
+
+data_retention_days = 30
+
+
+database_path = ./ridebuddy_data.db
+
+
+export_format = json
+
+
+</code></pre>
+<br>
+<h4 id="2--vehicle-configuration--vehicle_config-json">2. Vehicle Configuration (vehicle_config.json)</h4>
+<p><strong>Code (json):</strong></p>
+<pre><code>
+{
+
+
+  &quot;vehicle_info&quot;: {
+
+
+    &quot;vehicle_id&quot;: &quot;VEHICLE_001&quot;,
+
+
+    &quot;fleet_id&quot;: &quot;FLEET_A&quot;,
+
+
+    &quot;make&quot;: &quot;Generic&quot;,
+
+
+    &quot;model&quot;: &quot;Vehicle&quot;,
+
+
+    &quot;year&quot;: 2024
+
+
+  },
+
+
+  &quot;deployment_settings&quot;: {
+
+
+    &quot;vehicle_mode&quot;: false,
+
+
+    &quot;fleet_mode&quot;: false,
+
+
+    &quot;kiosk_mode&quot;: false,
+
+
+    &quot;auto_start&quot;: false,
+
+
+    &quot;power_save_mode&quot;: false
+
+
+  },
+
+
+  &quot;alert_thresholds&quot;: {
+
+
+    &quot;drowsiness&quot;: 0.75,
+
+
+    &quot;distraction&quot;: 0.8,
+
+
+    &quot;phone_usage&quot;: 0.7,
+
+
+    &quot;seatbelt&quot;: 0.8
+
+
+  },
+
+
+  &quot;camera_settings&quot;: {
+
+
+    &quot;primary_camera&quot;: 0,
+
+
+    &quot;backup_camera&quot;: 1,
+
+
+    &quot;resolution&quot;: &quot;640x480&quot;,
+
+
+    &quot;auto_switch&quot;: true
+
+
+  },
+
+
+  &quot;connectivity&quot;: {
+
+
+    &quot;fleet_server&quot;: &quot;https://fleet.ridebuddy.com&quot;,
+
+
+    &quot;api_key&quot;: &quot;&quot;,
+
+
+    &quot;sync_interval&quot;: 300,
+
+
+    &quot;offline_mode&quot;: true
+
+
+  }
+
+
+}
+
+
+</code></pre>
+<br>
+<h3 id="environment-variables-setup">Environment Variables Setup</h3>
+<br>
+<h4 id="windows-environment-variables">Windows Environment Variables</h4>
+<p><strong>Code (powershell):</strong></p>
+<pre><code>
+# Set via PowerShell (temporary)
+
+
+$env:RIDEBUDDY_VEHICLE_MODE = &quot;false&quot;
+
+
+$env:RIDEBUDDY_LOG_LEVEL = &quot;INFO&quot;
+
+
+$env:RIDEBUDDY_CONFIG_PATH = &quot;./ridebuddy_config.ini&quot;
+
+
+
+
+
+# Set permanently via System Properties
+
+
+# Computer &gt; Properties &gt; Advanced System Settings &gt; Environment Variables
+
+
+</code></pre>
+<br>
+<h4 id="linux-mac-environment-variables">Linux/Mac Environment Variables</h4>
+<p><strong>Code (bash):</strong></p>
+<pre><code>
+# Add to ~/.bashrc or ~/.zshrc
+
+
+export RIDEBUDDY_VEHICLE_MODE=false
+
+
+export RIDEBUDDY_LOG_LEVEL=INFO
+
+
+export RIDEBUDDY_CONFIG_PATH=./ridebuddy_config.ini
+
+
+
+
+
+# Reload configuration
+
+
+source ~/.bashrc
+
+
+</code></pre>
+<br>
+<hr>
+<br>
+<h2 id="first-run">First Run</h2>
+<br>
+<h3 id="pre-flight-check">Pre-Flight Check</h3>
+<br>
+<h4 id="system-validation-script">System Validation Script</h4>
+<p><strong>Code (bash):</strong></p>
+<pre><code>
+# Run system validation
+
+
+python system_validation.py
+
+
+
+
+
+# Expected output:
+
+
+✅ Python version: 3.9.7 (Compatible)
+
+
+✅ Dependencies: All required packages installed
+
+
+✅ Camera: Device found at index 0
+
+
+✅ Model: Enhanced driver model loaded successfully
+
+
+✅ Configuration: Valid configuration files found
+
+
+✅ Permissions: Camera and file system access granted
+
+
+</code></pre>
+<br>
+<h4 id="camera-diagnostic-test">Camera Diagnostic Test</h4>
+<p><strong>Code (bash):</strong></p>
+<pre><code>
+# Test camera functionality
+
+
+python camera_diagnostics.py
+
+
+
+
+
+# Expected output:
+
+
+🎥 Camera Diagnostic Report
+
+
+├── Camera Index 0: ✅ Available (640x480 @ 30fps)
+
+
+├── Camera Index 1: ❌ Not available
+
+
+├── Resolution Test: ✅ Supports 640x480, 1280x720
+
+
+├── Frame Rate Test: ✅ Stable at 30fps
+
+
+└── Auto-exposure: ✅ Working correctly
+
+
+</code></pre>
+<br>
+<h3 id="application-launch">Application Launch</h3>
+<br>
+<h4 id="standard-launch">Standard Launch</h4>
+<p><strong>Code (bash):</strong></p>
+<pre><code>
+# Navigate to project directory
+
+
+cd /path/to/ridebuddy-pro
+
+
+
+
+
+# Launch application
+
+
+python ridebuddy_optimized_gui.py
+
+
+</code></pre>
+<br>
+<h4 id="vehicle-mode-launch">Vehicle Mode Launch</h4>
+<p><strong>Code (bash):</strong></p>
+<pre><code>
+# Set vehicle mode
+
+
+set RIDEBUDDY_VEHICLE_MODE=true
+
+
+
+
+
+# Launch with vehicle configuration
+
+
+python ridebuddy_optimized_gui.py --config vehicle_config.json
+
+
+</code></pre>
+<br>
+<h4 id="debug-mode-launch">Debug Mode Launch</h4>
+<p><strong>Code (bash):</strong></p>
+<pre><code>
+# Launch with verbose logging
+
+
+python ridebuddy_optimized_gui.py --debug --log-level DEBUG
+
+
+</code></pre>
+<br>
+<h3 id="initial-setup-wizard">Initial Setup Wizard</h3>
+<br>
+<p>When launching for the first time, the application will guide you through:</p>
+<br>
+<ol>
+<li><strong>Camera Selection</strong>: Choose primary camera device</li>
+<li><strong>AI Model Loading</strong>: Verify model file integrity</li>
+<li><strong>Sensitivity Calibration</strong>: Adjust alert thresholds</li>
+<li><strong>Audio Test</strong>: Verify alert sound functionality</li>
+<li><strong>Performance Baseline</strong>: Establish performance metrics</li>
+</ol>
+<br>
+<hr>
+<br>
+<h2 id="vehicle-deployment">Vehicle Deployment</h2>
+<br>
+<h3 id="automotive-installation">Automotive Installation</h3>
+<br>
+<h4 id="hardware-setup">Hardware Setup</h4>
+<pre><code>
+Installation Steps:
+
+
+1. Mount camera securely (dashboard or A-pillar)
+
+
+2. Connect to vehicle power (12V adapter)
+
+
+3. Install processing unit (laptop/mini-PC)
+
+
+4. Configure display (optional dashboard screen)
+
+
+5. Test in various lighting conditions
+
+
+</code></pre>
+<br>
+<h4 id="software-configuration">Software Configuration</h4>
+<p><strong>Code (bash):</strong></p>
+<pre><code>
+# Enable vehicle mode
+
+
+echo &quot;RIDEBUDDY_VEHICLE_MODE=true&quot; &gt;&gt; .env
+
+
+
+
+
+# Configure for automotive use
+
+
+python vehicle_deployment_guide.py --setup
+
+
+
+
+
+# Set auto-start (Windows)
+
+
+# Add to Windows Startup folder:
+
+
+# C:\Users\{username}\AppData\Roaming\Microsoft\Windows\Start Menu\Programs\Startup
+
+
+</code></pre>
+<br>
+<h4 id="fleet-management-setup">Fleet Management Setup</h4>
+<p><strong>Code (json):</strong></p>
+<pre><code>
+{
+
+
+  &quot;fleet_configuration&quot;: {
+
+
+    &quot;central_server&quot;: &quot;https://fleet.company.com&quot;,
+
+
+    &quot;vehicle_registration&quot;: true,
+
+
+    &quot;real_time_sync&quot;: true,
+
+
+    &quot;offline_capability&quot;: true,
+
+
+    &quot;data_encryption&quot;: true
+
+
+  }
+
+
+}
+
+
+</code></pre>
+<br>
+<h3 id="batch-installation-scripts">Batch Installation Scripts</h3>
+<br>
+<h4 id="windows-batch-setup--setup_vehicle-bat">Windows Batch Setup (setup_vehicle.bat)</h4>
+<p><strong>Code (batch):</strong></p>
+<pre><code>
+@echo off
+
+
+echo Setting up RideBuddy for vehicle deployment...
+
+
+
+
+
+REM Set environment variables
+
+
+setx RIDEBUDDY_VEHICLE_MODE &quot;true&quot;
+
+
+setx RIDEBUDDY_AUTO_START &quot;true&quot;
+
+
+
+
+
+REM Install as Windows service (optional)
+
+
+python install_service.py
+
+
+
+
+
+REM Create desktop shortcut
+
+
+python create_shortcuts.py
+
+
+
+
+
+echo Vehicle setup complete!
+
+
+pause
+
+
+</code></pre>
+<br>
+<h4 id="linux-service-setup">Linux Service Setup</h4>
+<p><strong>Code (bash):</strong></p>
+<pre><code>
+#!/bin/bash
+
+
+# Create systemd service for auto-start
+
+
+
+
+
+sudo tee /etc/systemd/system/ridebuddy.service &gt; /dev/null &lt;&lt;EOF
+
+
+[Unit]
+
+
+Description=RideBuddy Pro Driver Monitoring
+
+
+After=multi-user.target
+
+
+
+
+
+[Service]
+
+
+Type=simple
+
+
+User=ridebuddy
+
+
+Environment=RIDEBUDDY_VEHICLE_MODE=true
+
+
+ExecStart=/usr/bin/python3 /opt/ridebuddy/ridebuddy_optimized_gui.py
+
+
+Restart=always
+
+
+
+
+
+[Install]
+
+
+WantedBy=multi-user.target
+
+
+EOF
+
+
+
+
+
+sudo systemctl enable ridebuddy.service
+
+
+sudo systemctl start ridebuddy.service
+
+
+</code></pre>
+<br>
+<hr>
+<br>
+<h2 id="troubleshooting">Troubleshooting</h2>
+<br>
+<h3 id="common-installation-issues">Common Installation Issues</h3>
+<br>
+<h4 id="1--python-version-conflicts">1. Python Version Conflicts</h4>
+<p><strong>Code (bash):</strong></p>
+<pre><code>
+# Problem: Multiple Python versions
+
+
+# Solution: Use specific Python version
+
+
+python3.9 -m venv ridebuddy_env
+
+
+# or
+
+
+py -3.9 -m venv ridebuddy_env  # Windows with Python Launcher
+
+
+</code></pre>
+<br>
+<h4 id="2--pytorch-installation-issues">2. PyTorch Installation Issues</h4>
+<p><strong>Code (bash):</strong></p>
+<pre><code>
+# Problem: CUDA version conflicts or large downloads
+
+
+# Solution: Use CPU-only version
+
+
+pip uninstall torch torchvision
+
+
+pip install torch torchvision --index-url https://download.pytorch.org/whl/cpu
+
+
+</code></pre>
+<br>
+<h4 id="3--opencv-import-errors">3. OpenCV Import Errors</h4>
+<p><strong>Code (bash):</strong></p>
+<pre><code>
+# Problem: OpenCV not importing
+
+
+# Solutions:
+
+
+pip uninstall opencv-python opencv-python-headless
+
+
+pip install opencv-python==4.8.1.78
+
+
+
+
+
+# For headless servers:
+
+
+pip install opencv-python-headless
+
+
+</code></pre>
+<br>
+<h4 id="4--camera-access-issues">4. Camera Access Issues</h4>
+<p><strong>Code (bash):</strong></p>
+<pre><code>
+# Windows: Check camera permissions
+
+
+# Settings &gt; Privacy &amp; Security &gt; Camera
+
+
+
+
+
+# Linux: Add user to video group
+
+
+sudo usermod -a -G video $USER
+
+
+
+
+
+# Test camera independently
+
+
+python -c &quot;import cv2; cap = cv2.VideoCapture(0); print(&#x27;Camera:&#x27;, cap.isOpened())&quot;
+
+
+</code></pre>
+<br>
+<h4 id="5--permission-errors">5. Permission Errors</h4>
+<p><strong>Code (bash):</strong></p>
+<pre><code>
+# Windows: Run as Administrator
+
+
+# Right-click PowerShell/Command Prompt &gt; &quot;Run as Administrator&quot;
+
+
+
+
+
+# Linux: Check file permissions
+
+
+chmod +x *.py
+
+
+sudo chown -R $USER:$USER /path/to/ridebuddy
+
+
+</code></pre>
+<br>
+<h3 id="performance-optimization">Performance Optimization</h3>
+<br>
+<h4 id="memory-issues">Memory Issues</h4>
+<p><strong>Code (ini):</strong></p>
+<pre><code>
+# Reduce memory usage in ridebuddy_config.ini
+
+
+[performance]
+
+
+max_memory_mb = 256        # Reduce from 512
+
+
+frame_drop_threshold = 0.9  # More aggressive frame dropping
+
+
+cpu_limit_percent = 60     # Lower CPU limit
+
+
+</code></pre>
+<br>
+<h4 id="cpu-performance">CPU Performance</h4>
+<p><strong>Code (bash):</strong></p>
+<pre><code>
+# Check system resources
+
+
+python -c &quot;import psutil; print(f&#x27;CPU: {psutil.cpu_percent()}%, RAM: {psutil.virtual_memory().percent}%&#x27;)&quot;
+
+
+
+
+
+# Optimize for low-power devices
+
+
+export RIDEBUDDY_POWER_SAVE=true
+
+
+</code></pre>
+<br>
+<h4 id="disk-space-issues">Disk Space Issues</h4>
+<p><strong>Code (bash):</strong></p>
+<pre><code>
+# Clean up temporary files
+
+
+python -c &quot;
+
+
+import os, glob
+
+
+for f in glob.glob(&#x27;*.log&#x27;): os.remove(f)
+
+
+for f in glob.glob(&#x27;__pycache__/*&#x27;): os.remove(f)
+
+
+&quot;
+
+
+</code></pre>
+<br>
+<hr>
+<br>
+<h2 id="verification">Verification</h2>
+<br>
+<h3 id="installation-verification-checklist">Installation Verification Checklist</h3>
+<br>
+<h4 id="environment-check">Environment Check</h4>
+<ul>
+<li>[ ] Python 3.8+ installed and accessible</li>
+<li>[ ] Virtual environment created and activated</li>
+<li>[ ] All required dependencies installed</li>
+<li>[ ] Camera device detected and accessible</li>
+<li>[ ] Configuration files present and valid</li>
+</ul>
+<br>
+<h4 id="functionality-check">Functionality Check</h4>
+<ul>
+<li>[ ] Application launches without errors</li>
+<li>[ ] Camera feed displays correctly</li>
+<li>[ ] AI model loads successfully</li>
+<li>[ ] GUI elements render properly</li>
+<li>[ ] Alert system functions correctly</li>
+</ul>
+<br>
+<h4 id="performance-check">Performance Check</h4>
+<ul>
+<li>[ ] Frame rate maintains 25-30 FPS</li>
+<li>[ ] Memory usage stays below 512MB</li>
+<li>[ ] CPU usage reasonable (&lt;50% average)</li>
+<li>[ ] No memory leaks during extended use</li>
+<li>[ ] Alert response time &lt;100ms</li>
+</ul>
+<br>
+<h3 id="automated-verification-script">Automated Verification Script</h3>
+<br>
+<p><strong>Code (python):</strong></p>
+<pre><code>
+# verification_script.py
+
+
+import sys
+
+
+import cv2
+
+
+import torch
+
+
+import tkinter as tk
+
+
+from pathlib import Path
+
+
+
+
+
+def verify_installation():
+
+
+    &quot;&quot;&quot;Comprehensive installation verification&quot;&quot;&quot;
+
+
+
+
+
+    checks = []
+
+
+
+
+
+    # Python version
+
+
+    python_ok = sys.version_info &gt;= (3, 8)
+
+
+    checks.append((&quot;Python 3.8+&quot;, python_ok))
+
+
+
+
+
+    # Dependencies
+
+
+    try:
+
+
+        import numpy, PIL, matplotlib
+
+
+        deps_ok = True
+
+
+    except ImportError:
+
+
+        deps_ok = False
+
+
+    checks.append((&quot;Dependencies&quot;, deps_ok))
+
+
+
+
+
+    # Camera
+
+
+    cap = cv2.VideoCapture(0)
+
+
+    camera_ok = cap.isOpened()
+
+
+    cap.release()
+
+
+    checks.append((&quot;Camera&quot;, camera_ok))
+
+
+
+
+
+    # Model file
+
+
+    model_exists = Path(&quot;./trained_models/enhanced_driver_net.pth&quot;).exists()
+
+
+    checks.append((&quot;AI Model&quot;, model_exists))
+
+
+
+
+
+    # Configuration
+
+
+    config_exists = Path(&quot;./ridebuddy_config.ini&quot;).exists()
+
+
+    checks.append((&quot;Configuration&quot;, config_exists))
+
+
+
+
+
+    # GUI
+
+
+    try:
+
+
+        root = tk.Tk()
+
+
+        root.destroy()
+
+
+        gui_ok = True
+
+
+    except:
+
+
+        gui_ok = False
+
+
+    checks.append((&quot;GUI Framework&quot;, gui_ok))
+
+
+
+
+
+    # Print results
+
+
+    print(&quot;\n🔍 RideBuddy Installation Verification&quot;)
+
+
+    print(&quot;=&quot; * 50)
+
+
+
+
+
+    all_passed = True
+
+
+    for check_name, passed in checks:
+
+
+        status = &quot;✅ PASS&quot; if passed else &quot;❌ FAIL&quot;
+
+
+        print(f&quot;{check_name:&lt;20} {status}&quot;)
+
+
+        if not passed:
+
+
+            all_passed = False
+
+
+
+
+
+    print(&quot;=&quot; * 50)
+
+
+    if all_passed:
+
+
+        print(&quot;🎉 All checks passed! RideBuddy is ready to use.&quot;)
+
+
+    else:
+
+
+        print(&quot;⚠️  Some checks failed. Please review installation steps.&quot;)
+
+
+
+
+
+    return all_passed
+
+
+
+
+
+if __name__ == &quot;__main__&quot;:
+
+
+    verify_installation()
+
+
+</code></pre>
+<br>
+<h3 id="performance-benchmark-script">Performance Benchmark Script</h3>
+<br>
+<p><strong>Code (python):</strong></p>
+<pre><code>
+# benchmark_script.py
+
+
+import time
+
+
+import psutil
+
+
+import cv2
+
+
+from datetime import datetime
+
+
+
+
+
+def benchmark_performance():
+
+
+    &quot;&quot;&quot;Benchmark system performance for RideBuddy&quot;&quot;&quot;
+
+
+
+
+
+    print(&quot;\n⚡ RideBuddy Performance Benchmark&quot;)
+
+
+    print(&quot;=&quot; * 50)
+
+
+
+
+
+    # System info
+
+
+    print(f&quot;CPU Cores: {psutil.cpu_count()}&quot;)
+
+
+    print(f&quot;Total RAM: {psutil.virtual_memory().total / (1024**3):.1f} GB&quot;)
+
+
+    print(f&quot;Available RAM: {psutil.virtual_memory().available / (1024**3):.1f} GB&quot;)
+
+
+
+
+
+    # Camera test
+
+
+    cap = cv2.VideoCapture(0)
+
+
+    if cap.isOpened():
+
+
+        frame_times = []
+
+
+        for i in range(100):  # Test 100 frames
+
+
+            start_time = time.time()
+
+
+            ret, frame = cap.read()
+
+
+            if ret:
+
+
+                # Simulate processing
+
+
+                frame = cv2.resize(frame, (640, 480))
+
+
+            frame_times.append(time.time() - start_time)
+
+
+
+
+
+        cap.release()
+
+
+
+
+
+        avg_frame_time = sum(frame_times) / len(frame_times)
+
+
+        estimated_fps = 1.0 / avg_frame_time if avg_frame_time &gt; 0 else 0
+
+
+
+
+
+        print(f&quot;\n📹 Camera Performance:&quot;)
+
+
+        print(f&quot;Average frame time: {avg_frame_time*1000:.1f} ms&quot;)
+
+
+        print(f&quot;Estimated FPS: {estimated_fps:.1f}&quot;)
+
+
+
+
+
+        if estimated_fps &gt;= 25:
+
+
+            print(&quot;✅ Camera performance: EXCELLENT&quot;)
+
+
+        elif estimated_fps &gt;= 15:
+
+
+            print(&quot;⚠️  Camera performance: ADEQUATE&quot;)
+
+
+        else:
+
+
+            print(&quot;❌ Camera performance: NEEDS IMPROVEMENT&quot;)
+
+
+    else:
+
+
+        print(&quot;❌ Camera not accessible&quot;)
+
+
+
+
+
+    # CPU and Memory test
+
+
+    cpu_percent = psutil.cpu_percent(interval=1)
+
+
+    memory_percent = psutil.virtual_memory().percent
+
+
+
+
+
+    print(f&quot;\n💻 System Performance:&quot;)
+
+
+    print(f&quot;CPU Usage: {cpu_percent:.1f}%&quot;)
+
+
+    print(f&quot;Memory Usage: {memory_percent:.1f}%&quot;)
+
+
+
+
+
+    if cpu_percent &lt; 50 and memory_percent &lt; 70:
+
+
+        print(&quot;✅ System performance: EXCELLENT&quot;)
+
+
+    elif cpu_percent &lt; 80 and memory_percent &lt; 85:
+
+
+        print(&quot;⚠️  System performance: ADEQUATE&quot;)
+
+
+    else:
+
+
+        print(&quot;❌ System performance: NEEDS IMPROVEMENT&quot;)
+
+
+
+
+
+if __name__ == &quot;__main__&quot;:
+
+
+    benchmark_performance()
+
+
+</code></pre>
+<br>
+<hr>
+<br>
+<h2 id="quick-reference">Quick Reference</h2>
+<br>
+<h3 id="essential-commands">Essential Commands</h3>
+<p><strong>Code (bash):</strong></p>
+<pre><code>
+# Standard launch
+
+
+python ridebuddy_optimized_gui.py
+
+
+
+
+
+# Vehicle mode
+
+
+set RIDEBUDDY_VEHICLE_MODE=true &amp;&amp; python ridebuddy_optimized_gui.py
+
+
+
+
+
+# Debug mode
+
+
+python ridebuddy_optimized_gui.py --debug
+
+
+
+
+
+# Verification
+
+
+python verification_script.py
+
+
+
+
+
+# Performance test
+
+
+python benchmark_script.py
+
+
+</code></pre>
+<br>
+<h3 id="key-file-locations">Key File Locations</h3>
+<pre><code>
+Project Structure:
+
+
+├── ridebuddy_optimized_gui.py     # Main application
+
+
+├── ridebuddy_config.ini          # Configuration
+
+
+├── vehicle_config.json           # Vehicle settings
+
+
+├── requirements.txt              # Dependencies
+
+
+├── trained_models/               # AI models
+
+
+├── logs/                        # Log files
+
+
+└── data/                        # Data storage
+
+
+</code></pre>
+<br>
+<h3 id="support-resources">Support Resources</h3>
+<ul>
+<li><strong>System Documentation</strong>: RIDEBUDDY_SYSTEM_DOCUMENTATION.md</li>
+<li><strong>Configuration Reference</strong>: ridebuddy_config.ini comments</li>
+<li><strong>Troubleshooting Guide</strong>: This document, Troubleshooting section</li>
+<li><strong>Performance Optimization</strong>: benchmark_script.py output</li>
+</ul>
+<br>
+<hr>
+<br>
+<h2 id="support-contact">Support Contact</h2>
+<br>
+<p>For installation support:</p>
+<ol>
+<li><strong>Check this guide</strong> - Most issues covered here</li>
+<li><strong>Run verification script</strong> - Automated diagnosis</li>
+<li><strong>Check log files</strong> - Review error messages in logs/</li>
+<li><strong>System requirements</strong> - Ensure minimum specs met</li>
+<li><strong>Contact support</strong> - With verification results if needed</li>
+</ol>
+<br>
+<hr>
+<br>
+<p><em>Installation Guide Version 2.1.0 - October 2025</em></p>
+<p><em>Compatible with RideBuddy Pro v2.1.0</em></p>
+
+<div class="footer">
+    <p>Generated on October 03, 2025 - RideBuddy Pro Documentation</p>
+    <p>Document can be opened in Microsoft Word and saved as DOC/DOCX format</p>
+</div>
+</body>
+</html>

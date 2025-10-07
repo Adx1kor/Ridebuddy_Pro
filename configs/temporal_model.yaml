@@ -1,0 +1,58 @@
+# RideBuddy Temporal Model Configuration
+# Uses LSTM for video sequence processing
+
+# Model Configuration
+model:
+  backbone: 'mobilenet_v3_small'
+  num_classes: 3
+  dropout: 0.15
+  use_attention: true
+  pretrained: true
+
+# Temporal Model Configuration
+temporal_model:
+  sequence_length: 16
+  lstm_hidden_size: 128
+  lstm_layers: 1
+
+# Training Configuration
+epochs: 40
+batch_size: 16  # Smaller batch size due to sequence processing
+num_workers: 4
+use_amp: true
+
+# Optimizer Configuration
+optimizer:
+  type: 'AdamW'
+  lr: 0.0005  # Lower learning rate for temporal model
+  weight_decay: 0.0001
+
+# Scheduler Configuration
+scheduler:
+  type: 'ReduceLROnPlateau'
+  patience: 5
+  factor: 0.5
+
+# Loss Configuration
+loss:
+  classification_weight: 1.0
+  phone_detection_weight: 0.3
+  seatbelt_detection_weight: 0.2
+
+# Data Loader Configuration
+dataloader:
+  batch_size: 16
+  num_workers: 4
+  sequence_length: 16  # Process video sequences
+  image_size: 224
+
+# Early Stopping Configuration
+early_stopping:
+  patience: 12
+  min_delta: 0.001
+  restore_best_weights: true
+  verbose: true
+
+# Monitoring Configuration
+use_wandb: true
+experiment_name: 'ridebuddy_temporal'

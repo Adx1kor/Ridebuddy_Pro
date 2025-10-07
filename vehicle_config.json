@@ -1,0 +1,29 @@
+{
+  "vehicle_type": "sedan",
+  "fleet_management": {
+    "enabled": true,
+    "fleet_id": "FLEET_001",
+    "vehicle_id": "VH_001",
+    "organization": "RideBuddy Fleet"
+  },
+  "camera_settings": {
+    "device_id": 0,
+    "fps": 25,
+    "resolution": "640x480",
+    "auto_start": true,
+    "auto_exposure": true
+  },
+  "detection_settings": {
+    "sensitivity": 0.75,
+    "alert_threshold": 0.7,
+    "drowsiness_threshold": 0.7,
+    "phone_threshold": 0.75,
+    "seatbelt_threshold": 0.8
+  },
+  "performance": {
+    "max_memory_mb": 384,
+    "audio_alerts": true,
+    "auto_save_results": true,
+    "data_retention_days": 90
+  }
+}
