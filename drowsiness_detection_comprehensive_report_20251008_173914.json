@@ -1,0 +1,311 @@
+{
+  "analysis_timestamp": "2025-10-08T17:39:14.599905",
+  "parameters_analyzed": {
+    "facial_features": {
+      "eye_aspect_ratio": {
+        "description": "Ratio of eye height to eye width",
+        "drowsy_threshold": 0.25,
+        "normal_range": [
+          0.3,
+          0.4
+        ],
+        "weight": 0.35,
+        "detection_method": "Dlib 68-point facial landmarks"
+      },
+      "eye_closure_duration": {
+        "description": "Duration of eye closure in consecutive frames",
+        "drowsy_threshold": 30,
+        "normal_range": [
+          0,
+          10
+        ],
+        "weight": 0.3,
+        "detection_method": "Temporal analysis of EAR"
+      },
+      "blink_frequency": {
+        "description": "Number of blinks per minute",
+        "drowsy_range": [
+          0,
+          12
+        ],
+        "normal_range": [
+          15,
+          30
+        ],
+        "weight": 0.15,
+        "detection_method": "Blink detection algorithm"
+      },
+      "mouth_aspect_ratio": {
+        "description": "Mouth opening ratio for yawning detection",
+        "drowsy_threshold": 0.6,
+        "normal_range": [
+          0.0,
+          0.3
+        ],
+        "weight": 0.2,
+        "detection_method": "Dlib mouth landmarks analysis"
+      }
+    },
+    "head_pose_parameters": {
+      "head_nod_frequency": {
+        "description": "Frequency of involuntary head nodding",
+        "drowsy_indicator": "> 3 nods per minute",
+        "weight": 0.25,
+        "detection_method": "Head pose estimation with Euler angles"
+      },
+      "head_tilt_angle": {
+        "description": "Excessive head tilting indicating loss of control",
+        "drowsy_threshold": 15,
+        "weight": 0.2,
+        "detection_method": "PnP head pose estimation"
+      },
+      "gaze_direction": {
+        "description": "Eye gaze direction consistency",
+        "drowsy_indicator": "Inconsistent/wandering gaze",
+        "weight": 0.15,
+        "detection_method": "Pupil tracking and gaze estimation"
+      }
+    },
+    "behavioral_parameters": {
+      "reaction_time": {
+        "description": "Response time to visual/audio stimuli",
+        "drowsy_threshold": 1.5,
+        "normal_range": [
+          0.3,
+          0.8
+        ],
+        "weight": 0.1,
+        "detection_method": "Simulated reaction tests"
+      },
+      "hand_position": {
+        "description": "Hand placement on steering wheel",
+        "drowsy_indicators": [
+          "loose grip",
+          "hands dropping"
+        ],
+        "weight": 0.15,
+        "detection_method": "YOLO hand detection + pose estimation"
+      },
+      "body_posture": {
+        "description": "Overall body posture and slumping",
+        "drowsy_indicators": [
+          "slouching",
+          "leaning"
+        ],
+        "weight": 0.1,
+        "detection_method": "Pose estimation algorithms"
+      }
+    },
+    "distraction_differentiators": {
+      "phone_usage": {
+        "detection_methods": [
+          "Object detection",
+          "Hand gesture analysis"
+        ],
+        "indicators": [
+          "phone_visible",
+          "texting_gesture",
+          "call_gesture"
+        ],
+        "weight": 0.4,
+        "confidence_threshold": 0.7
+      },
+      "conversation": {
+        "detection_methods": [
+          "Audio analysis",
+          "Mouth movement"
+        ],
+        "indicators": [
+          "consistent_speech",
+          "head_movement_patterns"
+        ],
+        "weight": 0.25,
+        "confidence_threshold": 0.6
+      },
+      "navigation_interaction": {
+        "detection_methods": [
+          "Touch gesture detection",
+          "Screen interaction"
+        ],
+        "indicators": [
+          "deliberate_touches",
+          "focused_gaze"
+        ],
+        "weight": 0.2,
+        "confidence_threshold": 0.65
+      },
+      "passenger_interaction": {
+        "detection_methods": [
+          "Multi-person detection",
+          "Interaction analysis"
+        ],
+        "indicators": [
+          "multiple_faces",
+          "interaction_gestures"
+        ],
+        "weight": 0.15,
+        "confidence_threshold": 0.55
+      }
+    },
+    "environmental_factors": {
+      "lighting_conditions": {
+        "categories": [
+          "bright_sunlight",
+          "low_light",
+          "artificial_light"
+        ],
+        "compensation_methods": [
+          "Histogram equalization",
+          "Gamma correction"
+        ],
+        "weight": 0.05
+      },
+      "time_of_day": {
+        "high_risk_periods": [
+          "2-6 AM",
+          "2-4 PM"
+        ],
+        "contextual_weight_adjustment": 1.2,
+        "weight": 0.03
+      },
+      "driving_duration": {
+        "fatigue_threshold": 2,
+        "high_risk_threshold": 4,
+        "weight": 0.02
+      }
+    }
+  },
+  "test_cases_count": 10,
+  "performance_metrics": {
+    "confusion_matrix": [
+      [
+        38,
+        0,
+        28
+      ],
+      [
+        15,
+        29,
+        0
+      ],
+      [
+        13,
+        0,
+        20
+      ]
+    ],
+    "class_names": [
+      "Drowsy",
+      "Phone Distraction",
+      "Normal"
+    ],
+    "overall_accuracy": 0.6083916083916084,
+    "per_class_metrics": {
+      "Drowsy": {
+        "precision": 0.5757575757575758,
+        "recall": 0.5757575757575758,
+        "f1_score": 0.5757575757575758,
+        "support": 66
+      },
+      "Phone Distraction": {
+        "precision": 1.0,
+        "recall": 0.6590909090909091,
+        "f1_score": 0.7945205479452054,
+        "support": 44
+      },
+      "Normal": {
+        "precision": 0.4166666666666667,
+        "recall": 0.6060606060606061,
+        "f1_score": 0.49382716049382713,
+        "support": 33
+      }
+    },
+    "weighted_averages": {
+      "precision": 0.6695804195804196,
+      "recall": 0.6083916083916084,
+      "f1_score": 0.6241622406005968
+    }
+  },
+  "test_case_results": {
+    "D001": {
+      "accuracy": 1.0,
+      "sample_count": 11,
+      "correct_predictions": 11,
+      "most_common_prediction": 0,
+      "expected_class": 0
+    },
+    "D002": {
+      "accuracy": 1.0,
+      "sample_count": 11,
+      "correct_predictions": 11,
+      "most_common_prediction": 0,
+      "expected_class": 0
+    },
+    "P001": {
+      "accuracy": 1.0,
+      "sample_count": 11,
+      "correct_predictions": 11,
+      "most_common_prediction": 1,
+      "expected_class": 1
+    },
+    "P002": {
+      "accuracy": 1.0,
+      "sample_count": 11,
+      "correct_predictions": 11,
+      "most_common_prediction": 1,
+      "expected_class": 1
+    },
+    "N001": {
+      "accuracy": 1.0,
+      "sample_count": 11,
+      "correct_predictions": 11,
+      "most_common_prediction": 2,
+      "expected_class": 2
+    },
+    "E001": {
+      "accuracy": 0.0,
+      "sample_count": 11,
+      "correct_predictions": 0,
+      "most_common_prediction": 0,
+      "expected_class": 1
+    },
+    "E002": {
+      "accuracy": 0.8181818181818182,
+      "sample_count": 11,
+      "correct_predictions": 9,
+      "most_common_prediction": 2,
+      "expected_class": 2
+    },
+    "E003": {
+      "accuracy": 0.0,
+      "sample_count": 11,
+      "correct_predictions": 0,
+      "most_common_prediction": 0,
+      "expected_class": 2
+    },
+    "T001": {
+      "accuracy": 0.36363636363636365,
+      "sample_count": 44,
+      "correct_predictions": 16,
+      "most_common_prediction": 2,
+      "expected_class": 0
+    },
+    "M001": {
+      "accuracy": 0.6363636363636364,
+      "sample_count": 11,
+      "correct_predictions": 7,
+      "most_common_prediction": 1,
+      "expected_class": 1
+    }
+  },
+  "recommendations": [
+    "Overall accuracy is below 90%. Consider additional training data and feature engineering.",
+    "Low recall (57.58%) for Drowsy. Consider balancing dataset and improving feature extraction.",
+    "Low precision (57.58%) for Drowsy. Consider reducing false positives with better threshold tuning.",
+    "Low recall (65.91%) for Phone Distraction. Consider balancing dataset and improving feature extraction.",
+    "Low recall (60.61%) for Normal. Consider balancing dataset and improving feature extraction.",
+    "Low precision (41.67%) for Normal. Consider reducing false positives with better threshold tuning.",
+    "Critical: Drowsiness detection recall should be >95% for safety. Implement ensemble methods and temporal analysis.",
+    "Implement better differentiation between drowsiness and phone distraction using multi-modal features."
+  ]
+}
